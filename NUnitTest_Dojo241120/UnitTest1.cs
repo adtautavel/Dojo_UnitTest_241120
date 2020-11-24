@@ -59,5 +59,24 @@ namespace NUnitTest_Dojo241120
             int resultat = calculatorFact.CalculateFactorielle();
             Assert.AreEqual(362880, resultat);
         }
+
+        [Test]
+        //Complete the solution so that it splits the string into pairs of two characters. 
+        //If the string contains an odd number of characters then it should replace the missing 
+        //second character of the final pair with an underscore ('_').
+        public void TestSplitString()
+        {
+            string entry = "abcde";
+            string entry2 = "abcd";
+            string[] result_entry = { "ab", "cd", "e_" };
+            string[] result_entry2 = { "ab", "cd" };
+
+            var codewar = new Codewar();
+            string[] resultat_expected = codewar.SplitString(entry);
+            string[] resultat_expected2 = codewar.SplitString(entry2);
+
+            Assert.AreEqual(result_entry, resultat_expected);
+            Assert.AreEqual(result_entry2, resultat_expected2);
+        }
     }
 }
